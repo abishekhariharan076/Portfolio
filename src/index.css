@@ -1,0 +1,83 @@
+:root {
+  --bg-dark: #000000;
+  --card-bg: rgba(28, 28, 30, 0.7);
+  --resume-gold: #d4af37; 
+  --accent-blue: #0071e3;
+  --accent-green: #30d158;
+  --accent-yellow: #ffd60a;
+  --accent-red: #ff453a;
+  --text-main: #f5f5f7;
+  --text-dim: #86868b;
+  --glass-border: rgba(255, 255, 255, 0.15);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* NAVIGATION */
+nav {
+  position: fixed; top: 0; left: 0; width: 100%; height: 70px;
+  backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
+  background: rgba(0,0,0,0.7); display: flex; justify-content: space-between;
+  padding: 0 40px; align-items: center; z-index: 1000;
+  border-bottom: 0.5px solid var(--glass-border);
+}
+
+.resume-btn {
+  background: transparent; color: var(--resume-gold) !important;
+  padding: 8px 22px; border-radius: 30px; text-decoration: none;
+  font-weight: 600; border: 1px solid var(--resume-gold);
+  transition: all 0.3s ease;
+}
+.resume-btn:hover { background: var(--resume-gold); color: black !important; }
+
+/* EXPERTISE SECTION FIXES */
+#expertise {
+  padding-top: 40px !important; /* Reduced top padding */
+  padding-bottom: 20px !important;
+}
+
+#expertise h2 {
+  margin-bottom: 0px !important; /* Removed bottom margin */
+}
+
+.watch-viewport {
+  position: relative; 
+  height: 750px; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  margin-top: -60px; /* Pulls bubbles up towards the title */
+}
+
+.skill-bubble {
+  position: absolute; width: 110px; height: 110px;
+  background: var(--card-bg); border-radius: 50%;
+  display: flex; flex-direction: column; justify-content: center;
+  align-items: center; border: 1px solid var(--glass-border);
+  transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); text-align: center;
+  opacity: 0;
+}
+.skill-bubble.visible { opacity: 1; }
+.skill-bubble:hover { transform: scale(1.2) !important; border-color: var(--accent-blue); z-index: 50; }
+.skill-bubble .name { font-size: 11px; color: var(--text-dim); text-transform: uppercase; }
+.skill-bubble .percent { font-size: 18px; font-weight: 700; color: var(--text-main); }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* CONTENT LAYOUT */
+.container { max-width: 1000px; margin: 0 auto; padding: 80px 20px; }
+.card { background: var(--card-bg); border: 1px solid var(--glass-border); border-radius: 24px; padding: 40px; margin-bottom: 30px; }
+.stats-card { background: var(--card-bg); border: 1px solid var(--glass-border); border-radius: 24px; padding: 30px; }
+.bar-bg { width: 100%; height: 8px; background: rgba(255,255,255,0.05); border-radius: 4px; margin: 8px 0 20px 0; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 4px; }
