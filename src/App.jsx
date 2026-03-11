@@ -323,16 +323,16 @@ function App() {
         <div className="card">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start' }}>
             <div>
-              <h3>NextGen Scholar (Intern)</h3>
-              <p className="dim-text">Bannari Amman Institute of Technology</p>
+              <h3>WatchParty</h3>
+              <p className="dim-text">Frontend Development</p>
             </div>
-            <p className="dim-text">Aug 2024 - Present</p>
           </div>
           <br />
           <p>
-            Selected for the prestigious NextGen Scholar program, focusing on cloud infrastructure and full-stack development. Contributing to institutional projects, automating cloud cost management across AWS and Azure, and building secure platforms for student engagement.
+            Contributed to the frontend development of WatchParty by enhancing the desktop user experience using React and TypeScript. Efforts focused on refining UI components, modernizing the layout, and optimizing playback controls to improve information density and visual feedback.
           </p>
         </div>
+
       </section>
 
 
