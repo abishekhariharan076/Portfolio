@@ -227,8 +227,15 @@ function App() {
       issuer: "Cisco Skills For All",
       date: "2024",
       pdf: "https://drive.google.com/file/d/1qdhaBhIMxRIF2uC-HuGzxzKVrjRcVH3j/preview"
+    },
+    {
+      title: "CSS Essentials",
+      issuer: "Cisco Skills For All",
+      date: "2024",
+      pdf: "https://drive.google.com/file/d/1qdhaBhIMxRIF2uC-HuGzxzKVrjRcVH3j/preview"
     }
   ];
+
 
 
   const scrollToSection = (id) => {
