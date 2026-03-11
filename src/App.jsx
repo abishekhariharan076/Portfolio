@@ -364,9 +364,10 @@ function App() {
           </p>
           <br />
           <p><strong>Tech Stack:</strong> MongoDB, Express.js, React.js, Node.js, Socket.io, Recharts, Tailwind CSS.</p>
-          <a href="https://github.com/abishekhariharan076/AESP" target="_blank" rel="noopener noreferrer" className="github-btn" style={{ marginTop: '1.5rem', display: 'inline-block' }}>
+          <a href="https://github.com/abishekhariharan076/Academic-Emotional-Support-Portal" target="_blank" rel="noopener noreferrer" className="github-btn" style={{ marginTop: '1.5rem', display: 'inline-block' }}>
             View Code on GitHub
           </a>
+
         </div>
       </section>
 
