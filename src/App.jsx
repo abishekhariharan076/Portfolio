@@ -375,13 +375,7 @@ function App() {
             View Code on GitHub
           </a>
         </div>
-        <div className="card" style={{ marginTop: '2rem' }}>
-          <h3>SyncWATCH</h3>
-          <p className="dim-text">SyncWatch is a production-grade watch-party platform that enables users to upload videos using chunked uploads, convert them into HLS streams, and watch together in perfect sync with real-time chat and playback control. Built with React, Node.js, Socket.IO, and FFmpeg, it delivers smooth, lag-free streaming optimized for long-distance viewing. The architecture is fully free-tier friendly, leveraging Cloudflare R2 for zero-egress HLS streaming and efficient resource usage. Real-time presence, host-controlled synchronization, and a clean dark UI ensure a seamless shared viewing experience. Unlike screen sharing, SyncWatch implements true video streaming using industry-standard protocols.</p>
-          <a href="https://github.com/abishekhariharan076/SyncWatch" target="_blank" rel="noopener noreferrer" className="github-btn" style={{ marginTop: '1.5rem', display: 'inline-block' }}>
-            View Code on GitHub
-          </a>
-        </div>
+
         <div className="card" style={{ marginTop: '2rem' }}>
           <h3>Academic Emotional Support Portal</h3>
           <p className="dim-text">A secure, role-based MERN-stack platform for student well-being management.</p>
