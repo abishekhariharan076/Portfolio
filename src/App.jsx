@@ -213,37 +213,37 @@ function App() {
     {
       title: "Introduction to Cybersecurity",
       issuer: "Cisco Skills For All",
-      date: "2024",
+
       pdf: "https://drive.google.com/file/d/1pPP1CgkqICywxK0Rex2NxYNi28NbI7jQ/preview"
     },
     {
       title: "Introduction to Modern AI",
       issuer: "Cisco Skills For All",
-      date: "2026",
+
       pdf: "https://drive.google.com/file/d/1j6KwowmII--XR2mG5xVu4FMi3gmGKQI-/preview"
     },
     {
       title: "JavaScript Essentials 1",
       issuer: "Cisco Skills For All",
-      date: "2024",
+
       pdf: "https://drive.google.com/file/d/1qdhaBhIMxRIF2uC-HuGzxzKVrjRcVH3j/preview"
     },
     {
       title: "CSS Essentials",
       issuer: "Cisco Skills For All",
-      date: "2024",
+
       pdf: "https://drive.google.com/file/d/1Qxe9wb3amMSSNAFwPL2CE-LYnlUuOynI/preview"
     },
     {
       title: "Introduction to Data Science",
       issuer: "Cisco Skills For All",
-      date: "2024",
+
       pdf: "https://drive.google.com/file/d/1yLANZB9WSDKkLxb-TShcP4G3AFSpsHlu/preview"
     },
     {
       title: "Computer Hardware Basics",
       issuer: "Cisco Skills For All",
-      date: "2024",
+
       pdf: "https://drive.google.com/file/d/1-ePNW7mX-hOLBg5kdSIWdtW50lfp6hc_/preview"
     }
   ];
