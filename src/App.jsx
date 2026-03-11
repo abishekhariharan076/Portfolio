@@ -221,8 +221,15 @@ function App() {
       issuer: "Cisco Skills For All",
       date: "2026",
       pdf: "https://drive.google.com/file/d/1j6KwowmII--XR2mG5xVu4FMi3gmGKQI-/preview"
+    },
+    {
+      title: "JavaScript Essentials 1",
+      issuer: "Cisco Skills For All",
+      date: "2024",
+      pdf: "https://drive.google.com/file/d/1qdhaBhIMxRIF2uC-HuGzxzKVrjRcVH3j/preview"
     }
   ];
+
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
