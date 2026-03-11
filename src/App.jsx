@@ -218,7 +218,7 @@ function App() {
     },
     {
       title: "Introduction to Modern AI",
-      issuer: "N/A",
+      issuer: "Cisco Skills For All",
       date: "2026",
       pdf: "https://drive.google.com/file/d/1j6KwowmII--XR2mG5xVu4FMi3gmGKQI-/preview"
     }
