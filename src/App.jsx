@@ -143,7 +143,8 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['experience', 'expertise', 'coding', 'projects', 'certifications', 'contact'];
+      const sections = ['projects', 'experience', 'expertise', 'coding', 'certifications', 'contact'];
+
       const scrollPosition = window.scrollY + 200;
 
       // Bio Animation Logic
@@ -264,6 +265,12 @@ function App() {
       <nav>
         <div className="nav-links">
           <a
+            onClick={() => scrollToSection('projects')}
+            className={activeSection === 'projects' ? 'active' : ''}
+          >
+            Projects
+          </a>
+          <a
             onClick={() => scrollToSection('experience')}
             className={activeSection === 'experience' ? 'active' : ''}
           >
@@ -271,7 +278,6 @@ function App() {
           </a>
           <a
             onClick={() => scrollToSection('expertise')}
-
             className={activeSection === 'expertise' ? 'active' : ''}
           >
             Expertise
@@ -281,12 +287,6 @@ function App() {
             className={activeSection === 'coding' ? 'active' : ''}
           >
             Coding
-          </a>
-          <a
-            onClick={() => scrollToSection('projects')}
-            className={activeSection === 'projects' ? 'active' : ''}
-          >
-            Projects
           </a>
           <a
             onClick={() => scrollToSection('certifications')}
@@ -301,6 +301,7 @@ function App() {
             Contact
           </a>
         </div>
+
         <a href="/resume.pdf" className="resume-btn" target="_blank" rel="noopener noreferrer">
           Resume
         </a>
@@ -318,6 +319,37 @@ function App() {
       </header>
 <br></br>
 
+
+      <section id="projects" className="container">
+        <h2 className="section-title">Projects</h2>
+        <div className="card">
+          <h3>Cloud Cost Tracker & Resource Manager</h3>
+          <p className="dim-text">Enterprise system for multi-cloud resource orchestration.</p>
+          <br></br>
+          <p>Achieved real-time monitoring and cost visibility across AWS and Azure through a unified multi-cloud dashboard. Implemented AI/ML-based anomaly detection and cost prediction models, improving early issue detection and enabling proactive cost optimization. Designed intelligent alerting with multi-channel notifications and chaos engineering simulations, strengthening system resilience and reducing incident recovery time.
+          </p><br></br>
+          <p><strong>Tech Stack:</strong> FastAPI, React.js, AWS (Boto3, CloudWatch, Cost Explorer, EC2, SNS), Azure (Monitor, Cost Management, Compute, Communication Services), Scikit-learn, Pandas, NumPy, Tailwind CSS, Recharts, REST APIs..</p>
+          <a href="https://github.com/abishekhariharan076/Cloud-monitor" target="_blank" rel="noopener noreferrer" className="github-btn">
+            View Code on GitHub
+          </a>
+        </div>
+
+        <div className="card" style={{ marginTop: '2rem' }}>
+          <h3>Academic Emotional Support Portal</h3>
+          <p className="dim-text">A secure, role-based MERN-stack platform for student well-being management.</p>
+          <br />
+          <p>
+            This portal provides a secure environment where students submit emotional check-ins, allowing counselors to manage support requests through a centralized dashboard. The system integrates MongoDB for data storage, Node.js for the backend, and React for frontend analytics to track well-being trends. The platform includes features for optional anonymity, role-based access control, and comprehensive data visualization.
+          </p>
+          <br />
+          <p><strong>Tech Stack:</strong> MongoDB, Express.js, React.js, Node.js, Socket.io, Recharts, Tailwind CSS.</p>
+          <a href="https://github.com/abishekhariharan076/Academic-Emotional-Support-Portal" target="_blank" rel="noopener noreferrer" className="github-btn" style={{ marginTop: '1.5rem', display: 'inline-block' }}>
+            View Code on GitHub
+          </a>
+
+        </div>
+      </section>
+
       <section id="experience" className="container">
         <h2 className="section-title">Experience</h2>
         <div className="card">
@@ -332,9 +364,7 @@ function App() {
             Contributed to the frontend development of WatchParty by enhancing the desktop user experience using React and TypeScript. Efforts focused on refining UI components, modernizing the layout, and optimizing playback controls to improve information density and visual feedback.
           </p>
         </div>
-
       </section>
-
 
       <section id="expertise" className="container">
         <h2 className="section-title">Expertise</h2>
@@ -388,35 +418,6 @@ function App() {
         </div>
       </section>
 
-      <section id="projects" className="container">
-        <h2 className="section-title">Projects</h2>
-        <div className="card">
-          <h3>Cloud Cost Tracker & Resource Manager</h3>
-          <p className="dim-text">Enterprise system for multi-cloud resource orchestration.</p>
-          <br></br>
-          <p>Achieved real-time monitoring and cost visibility across AWS and Azure through a unified multi-cloud dashboard. Implemented AI/ML-based anomaly detection and cost prediction models, improving early issue detection and enabling proactive cost optimization. Designed intelligent alerting with multi-channel notifications and chaos engineering simulations, strengthening system resilience and reducing incident recovery time.
-          </p><br></br>
-          <p><strong>Tech Stack:</strong> FastAPI, React.js, AWS (Boto3, CloudWatch, Cost Explorer, EC2, SNS), Azure (Monitor, Cost Management, Compute, Communication Services), Scikit-learn, Pandas, NumPy, Tailwind CSS, Recharts, REST APIs..</p>
-          <a href="https://github.com/abishekhariharan076/Cloud-monitor" target="_blank" rel="noopener noreferrer" className="github-btn">
-            View Code on GitHub
-          </a>
-        </div>
-
-        <div className="card" style={{ marginTop: '2rem' }}>
-          <h3>Academic Emotional Support Portal</h3>
-          <p className="dim-text">A secure, role-based MERN-stack platform for student well-being management.</p>
-          <br />
-          <p>
-            This portal provides a secure environment where students submit emotional check-ins, allowing counselors to manage support requests through a centralized dashboard. The system integrates MongoDB for data storage, Node.js for the backend, and React for frontend analytics to track well-being trends. The platform includes features for optional anonymity, role-based access control, and comprehensive data visualization.
-          </p>
-          <br />
-          <p><strong>Tech Stack:</strong> MongoDB, Express.js, React.js, Node.js, Socket.io, Recharts, Tailwind CSS.</p>
-          <a href="https://github.com/abishekhariharan076/Academic-Emotional-Support-Portal" target="_blank" rel="noopener noreferrer" className="github-btn" style={{ marginTop: '1.5rem', display: 'inline-block' }}>
-            View Code on GitHub
-          </a>
-
-        </div>
-      </section>
 
 
       <section id="certifications" className="container">
