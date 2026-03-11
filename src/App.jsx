@@ -143,7 +143,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['expertise', 'coding', 'projects', 'certifications', 'contact'];
+      const sections = ['experience', 'expertise', 'coding', 'projects', 'certifications', 'contact'];
       const scrollPosition = window.scrollY + 200;
 
       // Bio Animation Logic
@@ -264,7 +264,14 @@ function App() {
       <nav>
         <div className="nav-links">
           <a
+            onClick={() => scrollToSection('experience')}
+            className={activeSection === 'experience' ? 'active' : ''}
+          >
+            Experience
+          </a>
+          <a
             onClick={() => scrollToSection('expertise')}
+
             className={activeSection === 'expertise' ? 'active' : ''}
           >
             Expertise
@@ -309,6 +316,25 @@ function App() {
           I design secure, scalable backend services, create intuitive and responsive user interfaces, and deploy production-ready applications using modern cloud platforms. I enjoy solving complex problems, learning new technologies, and delivering reliable, user-centered solutions. I’m open to collaboration and excited to contribute to impactful projects.
         </p>
       </header>
+<br></br>
+
+      <section id="experience" className="container">
+        <h2 className="section-title">Experience</h2>
+        <div className="card">
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start' }}>
+            <div>
+              <h3>NextGen Scholar (Intern)</h3>
+              <p className="dim-text">Bannari Amman Institute of Technology</p>
+            </div>
+            <p className="dim-text">Aug 2024 - Present</p>
+          </div>
+          <br />
+          <p>
+            Selected for the prestigious NextGen Scholar program, focusing on cloud infrastructure and full-stack development. Contributing to institutional projects, automating cloud cost management across AWS and Azure, and building secure platforms for student engagement.
+          </p>
+        </div>
+      </section>
+
 
       <section id="expertise" className="container">
         <h2 className="section-title">Expertise</h2>
