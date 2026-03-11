@@ -246,6 +246,12 @@ function App() {
       issuer: "Cisco Skills For All",
 
       pdf: "https://drive.google.com/file/d/1-ePNW7mX-hOLBg5kdSIWdtW50lfp6hc_/preview"
+    },
+    {
+      title: "Fundamentals of UI/UX Design",
+      issuer: "Microsoft",
+
+      pdf: "https://drive.google.com/file/d/1nSSf5dfNRJE59hFPxkvUc54NxS-PuttQ/preview"
     }
   ];
 
