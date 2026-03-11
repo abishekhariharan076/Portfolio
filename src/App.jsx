@@ -355,7 +355,21 @@ function App() {
             View Code on GitHub
           </a>
         </div>
+        <div className="card" style={{ marginTop: '2rem' }}>
+          <h3>Academic Emotional Support Portal</h3>
+          <p className="dim-text">A secure, role-based MERN-stack platform for student well-being management.</p>
+          <br />
+          <p>
+            This portal provides a secure environment where students submit emotional check-ins, allowing counselors to manage support requests through a centralized dashboard. The system integrates MongoDB for data storage, Node.js for the backend, and React for frontend analytics to track well-being trends. The platform includes features for optional anonymity, role-based access control, and comprehensive data visualization.
+          </p>
+          <br />
+          <p><strong>Tech Stack:</strong> MongoDB, Express.js, React.js, Node.js, Socket.io, Recharts, Tailwind CSS.</p>
+          <a href="https://github.com/abishekhariharan076/AESP" target="_blank" rel="noopener noreferrer" className="github-btn" style={{ marginTop: '1.5rem', display: 'inline-block' }}>
+            View Code on GitHub
+          </a>
+        </div>
       </section>
+
 
       <section id="certifications" className="container">
         <h2 className="section-title">Certifications</h2>
