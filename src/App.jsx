@@ -139,7 +139,35 @@ const BackgroundParticles = () => {
 function App() {
   const [activeSection, setActiveSection] = useState('');
   const [selectedCert, setSelectedCert] = useState(null);
+  const [lcStats, setLcStats] = useState({
+    totalSolved: 234,
+    easySolved: 134,
+    mediumSolved: 98,
+    hardSolved: 2,
+    totalEasy: 930,
+    totalMedium: 2022,
+    totalHard: 913
+  });
   const bioRef = useRef(null);
+
+  useEffect(() => {
+    fetch('https://leetcode-stats-api.herokuapp.com/abishekhariharan76')
+      .then(res => res.json())
+      .then(data => {
+        if (data.status === 'success') {
+          setLcStats({
+            totalSolved: data.totalSolved,
+            easySolved: data.easySolved,
+            mediumSolved: data.mediumSolved,
+            hardSolved: data.hardSolved,
+            totalEasy: data.totalEasy,
+            totalMedium: data.totalMedium,
+            totalHard: data.totalHard
+          });
+        }
+      })
+      .catch(err => console.error('Error fetching LeetCode stats:', err));
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -398,13 +426,13 @@ function App() {
         <div className="grid-2">
           <div className="stats-card">
             <p className="label">LeetCode Progress</p>
-            <div className="big-num">234</div>
-            <div className="stat-line"><span>Easy</span><span>134</span></div>
-            <div className="bar-bg"><div className="bar-fill green" style={{ width: '57%' }}></div></div>
-            <div className="stat-line"><span>Medium</span><span>98</span></div>
-            <div className="bar-bg"><div className="bar-fill yellow" style={{ width: '42%' }}></div></div>
-            <div className="stat-line"><span>Hard</span><span>2</span></div>
-            <div className="bar-bg"><div className="bar-fill red" style={{ width: '1%' }}></div></div>
+            <div className="big-num">{lcStats.totalSolved}</div>
+            <div className="stat-line"><span>Easy</span><span>{lcStats.easySolved} / {lcStats.totalEasy}</span></div>
+            <div className="bar-bg"><div className="bar-fill green" style={{ width: `${(lcStats.easySolved / lcStats.totalSolved) * 100}%` }}></div></div>
+            <div className="stat-line"><span>Medium</span><span>{lcStats.mediumSolved} / {lcStats.totalMedium}</span></div>
+            <div className="bar-bg"><div className="bar-fill yellow" style={{ width: `${(lcStats.mediumSolved / lcStats.totalSolved) * 100}%` }}></div></div>
+            <div className="stat-line"><span>Hard</span><span>{lcStats.hardSolved} / {lcStats.totalHard}</span></div>
+            <div className="bar-bg"><div className="bar-fill red" style={{ width: `${(lcStats.hardSolved / lcStats.totalSolved) * 100}%` }}></div></div>
             <a href="https://leetcode.com/u/abishekhariharan76/" target="_blank" rel="noopener noreferrer" className="link-text">Profile → LeetCode</a>
           </div>
 
