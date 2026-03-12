@@ -20,5 +20,5 @@ git push origin main
 ## Configuration Details
 - **Rewrites**: Handled via `vercel.json` for SPA routing (all paths served by `index.html`).
 - **Clean URLs**: Enabled to remove `.html` extensions.
-- **Caching**: Assets are cached for 1 year; `resume.pdf` is cached for 1 hour.
+- **Caching**: Assets are cached for 1 year via `vercel.json`.
 - **Build Output**: Set to `dist` in `vite.config.js`.

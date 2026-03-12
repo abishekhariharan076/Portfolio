@@ -308,7 +308,11 @@ function App() {
           </a>
         </div>
 
-        <a href="/resume.pdf" className="resume-btn" target="_blank" rel="noopener noreferrer">
+        <a 
+          onClick={() => setSelectedCert({ title: 'Resume', pdf: 'https://drive.google.com/file/d/1X-W-2AwcjrBFm4GdZSf3syebZD7UWtal/preview' })} 
+          className="resume-btn"
+          style={{ cursor: 'pointer' }}
+        >
           Resume
         </a>
       </nav>
