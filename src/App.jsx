@@ -151,10 +151,10 @@ function App() {
   const bioRef = useRef(null);
 
   useEffect(() => {
-    fetch('https://leetcode-stats-api.herokuapp.com/abishekhariharan76')
+    fetch('https://leetcode-api-faisalshohag.vercel.app/abishekhariharan76')
       .then(res => res.json())
       .then(data => {
-        if (data.status === 'success') {
+        if (data && data.totalSolved !== undefined) {
           setLcStats({
             totalSolved: data.totalSolved,
             easySolved: data.easySolved,
