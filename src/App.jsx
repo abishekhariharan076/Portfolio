@@ -1,7 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { ActivityCalendar } from 'react-activity-calendar';
+import { Tooltip as ReactTooltip } from 'react-tooltip';
+import 'react-tooltip/dist/react-tooltip.css';
+import { format, subYears, isAfter } from 'date-fns';
 import './App.css';
 
 const BackgroundParticles = () => {
+
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -148,6 +153,7 @@ function App() {
     totalMedium: 2022,
     totalHard: 913
   });
+  const [lcHeatmapData, setLcHeatmapData] = useState([]);
   const bioRef = useRef(null);
 
   useEffect(() => {
@@ -164,6 +170,35 @@ function App() {
             totalMedium: data.totalMedium,
             totalHard: data.totalHard
           });
+
+          if (data.submissionCalendar) {
+            const calendarParsed = typeof data.submissionCalendar === 'string' 
+              ? JSON.parse(data.submissionCalendar) 
+              : data.submissionCalendar;
+              
+            const oneYearAgo = subYears(new Date(), 1);
+            const heatmapPoints = [];
+
+            Object.entries(calendarParsed).forEach(([timestamp, count]) => {
+              const date = new Date(parseInt(timestamp) * 1000);
+              if (isAfter(date, oneYearAgo)) {
+                let level = 0;
+                if (count > 0 && count <= 2) level = 1;
+                else if (count > 2 && count <= 5) level = 2;
+                else if (count > 5 && count <= 10) level = 3;
+                else if (count > 10) level = 4;
+
+                heatmapPoints.push({
+                  date: format(date, 'yyyy-MM-dd'),
+                  count: count,
+                  level: level
+                });
+              }
+            });
+            
+            heatmapPoints.sort((a, b) => new Date(a.date) - new Date(b.date));
+            setLcHeatmapData(heatmapPoints);
+          }
         }
       })
       .catch(err => console.error('Error fetching LeetCode stats:', err));
@@ -450,6 +485,39 @@ function App() {
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style={{ width: '24px', height: '24px', filter: 'brightness(0) invert(1)' }} />
               <a href="https://github.com/abishekhariharan076" target="_blank" rel="noopener noreferrer" className="link-white" style={{ marginTop: 0 }}>Profile → GitHub</a>
             </div>
+          </div>
+          
+          <div className="stats-card" style={{ gridColumn: '1 / -1' }}>
+            <p className="label">LeetCode Contributions (Past Year)</p>
+            <div style={{ padding: '1rem', overflowX: 'auto', display: 'flex', justifyContent: 'center' }}>
+              {lcHeatmapData.length > 0 ? (
+                <ActivityCalendar 
+                  data={lcHeatmapData} 
+                  theme={{
+                    light: ['#1a1e3e', '#1b4a83', '#2b6fb5', '#4a9eff', '#64c8ff'],
+                    dark: ['#1a1e3e', '#1b4a83', '#2b6fb5', '#4a9eff', '#64c8ff']
+                  }}
+                  colorScheme="dark"
+                  labels={{
+                    legend: {
+                      less: 'Less',
+                      more: 'More'
+                    },
+                    months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    weekdays: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+                    totalCount: '{{count}} submissions in the last year'
+                  }}
+                  hideTotalCount={false}
+                  renderBlock={(block, activity) => React.cloneElement(block, {
+                    'data-tooltip-id': 'react-tooltip',
+                    'data-tooltip-html': `${activity.count} submissions on ${activity.date}`
+                  })}
+                />
+              ) : (
+                <p>Loading heatmap...</p>
+              )}
+            </div>
+            <ReactTooltip id="react-tooltip" />
           </div>
         </div>
       </section>
