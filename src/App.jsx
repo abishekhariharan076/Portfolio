@@ -400,13 +400,13 @@ function App() {
         <div className="grid-2">
           <div className="stats-card">
             <p className="label">LeetCode Progress</p>
-            <div className="big-num">203</div>
-            <div className="stat-line"><span>Easy</span><span>116</span></div>
+            <div className="big-num">234</div>
+            <div className="stat-line"><span>Easy</span><span>134</span></div>
             <div className="bar-bg"><div className="bar-fill green" style={{ width: '57%' }}></div></div>
-            <div className="stat-line"><span>Medium</span><span>85</span></div>
-            <div className="bar-bg"><div className="bar-fill yellow" style={{ width: '41%' }}></div></div>
+            <div className="stat-line"><span>Medium</span><span>98</span></div>
+            <div className="bar-bg"><div className="bar-fill yellow" style={{ width: '42%' }}></div></div>
             <div className="stat-line"><span>Hard</span><span>2</span></div>
-            <div className="bar-bg"><div className="bar-fill red" style={{ width: '5%' }}></div></div>
+            <div className="bar-bg"><div className="bar-fill red" style={{ width: '1%' }}></div></div>
             <a href="https://leetcode.com/u/abishekhariharan76/" target="_blank" rel="noopener noreferrer" className="link-text">Profile → LeetCode</a>
           </div>
 
