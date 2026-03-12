@@ -94,8 +94,8 @@ nav {
   /* Changed from center to prevent pushing up */
   align-items: center;
   text-align: center;
-  padding: 14rem 2rem 2rem;
-  /* Increased top padding to lower the name */
+  padding: 10rem 2rem 2rem;
+  /* Reduced top padding to move content up */
   position: relative;
 }
 
