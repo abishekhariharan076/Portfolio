@@ -50,7 +50,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  align-items: start;
+  align-items: stretch;
 }
 
 .platform-box {
@@ -70,6 +70,9 @@
   padding: 1.5rem;
   border: 1px solid rgba(100, 200, 255, 0.1);
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .skill-category h3 {
