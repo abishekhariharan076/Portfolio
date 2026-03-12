@@ -391,13 +391,13 @@ function App() {
         <div className="card">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start' }}>
             <div>
-              <h3>WatchParty</h3>
+              <h3>Open Source Contributor – WatchParty</h3>
               <p className="dim-text">Frontend Development</p>
             </div>
           </div>
           <br />
           <p>
-            Contributed to the frontend development of WatchParty by enhancing the desktop user experience using React and TypeScript. Efforts focused on refining UI components, modernizing the layout, and optimizing playback controls to improve information density and visual feedback.
+            Enhanced the frontend UI of the open-source project WatchParty by improving layout structure and interface components using React and TypeScript. Contributed through GitHub pull requests while maintaining compatibility with the existing codebase and project architecture.
           </p>
         </div>
       </section>
