@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ActivityCalendar } from 'react-activity-calendar';
+import { GitHubCalendar } from 'react-github-calendar';
 import { Tooltip as ReactTooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css';
 import { format, subYears, isAfter } from 'date-fns';
@@ -517,6 +518,23 @@ function App() {
                 <p>Loading heatmap...</p>
               )}
             </div>
+            
+            <p className="label" style={{ marginTop: '2rem' }}>GitHub Contributions</p>
+            <div style={{ padding: '1rem', overflowX: 'auto', display: 'flex', justifyContent: 'center' }}>
+              <GitHubCalendar 
+                username="abishekhariharan076" 
+                colorScheme="dark"
+                theme={{
+                  light: ['#1a1e3e', '#1b4a83', '#2b6fb5', '#4a9eff', '#64c8ff'],
+                  dark: ['#1a1e3e', '#1b4a83', '#2b6fb5', '#4a9eff', '#64c8ff']
+                }}
+                renderBlock={(block, activity) => React.cloneElement(block, {
+                  'data-tooltip-id': 'react-tooltip',
+                  'data-tooltip-html': `${activity.count} contributions on ${activity.date}`
+                })}
+              />
+            </div>
+
             <ReactTooltip id="react-tooltip" />
           </div>
         </div>
