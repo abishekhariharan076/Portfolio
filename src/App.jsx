@@ -507,7 +507,8 @@ function App() {
           <div className="card">
             <p className="label">Phone & Social</p>
             <p className="contact-info">+91 93421 93109</p>
-            <a href="https://www.linkedin.com/in/abishekhariharan-t-945322292/" target="_blank" rel="noopener noreferrer" className="link-blue">LinkedIn Profile →</a>
+            <a href="https://www.linkedin.com/in/abishekhariharan-t-945322292/" target="_blank" rel="noopener noreferrer" className="link-blue" style={{ display: 'block' }}>LinkedIn Profile →</a>
+            <a href="https://www.instagram.com/_abishek76/" target="_blank" rel="noopener noreferrer" className="link-blue" style={{ display: 'block', marginTop: '0.3rem' }}>Instagram Profile →</a>
           </div>
         </div>
       </section>
