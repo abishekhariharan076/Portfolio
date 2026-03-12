@@ -386,7 +386,7 @@ function App() {
         <p className="college">Bannari Amman Institute of Technology</p>
         <p className="dept">Computer Science and Engineering</p>
         <p className="bio-text" ref={bioRef}>
-          I am a technology-focused developer with a strong interest in building end-to-end applications, starting from UI design to frontend development, backend engineering, and cloud deployment. I focus on creating clean, intuitive user interfaces and responsive frontend experiences while developing secure and scalable backend services. With a solid understanding of modern cloud platforms, I deploy and manage production-ready applications that are reliable and efficient. I enjoy solving complex problems, learning new technologies, and building user-centered solutions that combine strong design with scalable system architecture.
+          I am a technology-focused developer skilled in UI design, frontend development, backend engineering, and cloud deployment. I build clean, responsive interfaces and develop secure, scalable backend systems. I enjoy solving complex problems, learning new technologies, and creating user-centered, production-ready applications.
         </p>
       </header>
 <br></br>
